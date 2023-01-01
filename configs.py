@@ -6,16 +6,16 @@ import os
 class Config(object):
 	API_ID = int(os.environ.get("API_ID", "19890227"))
 	API_HASH = os.environ.get("API_HASH", "ad2685e918be5a89c31e991448262e63")
-	BOT_TOKEN = os.environ.get("BOT_TOKEN", "5211965803:AAErvvVKh3XWfzhVEHqCashhS9B5I0piR9A") 
-	BOT_USERNAME = os.environ.get("BOT_USERNAME", " filemini")
-	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001787207236"))
-	BOT_OWNER = int(os.environ.get("BOT_OWNER", "1540312271"))
-	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://random:random@cluster0.tb63h.mongodb.net/cluster0?retryWrites=true&w=majority") 
-	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "0")
-	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1001583792995")
+	BOT_TOKEN = os.environ.get("BOT_TOKEN", "5670135699:AAG40R23a7vhHXYmDlGDYNPe-N2xDACD8QM") 
+	BOT_USERNAME = os.environ.get("BOT_USERNAME", " filestoreasu4bot")
+	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001188070894"))
+	BOT_OWNER = int(os.environ.get("BOT_OWNER", "880087645"))
+	DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://video:video@rishi.fzpls33.mongodb.net/?retryWrites=true&w=majority")
+	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "AsuranMoviefinder")
+	LOG_CHANNEL = os.environ.get("LOG_CHANNEL",  "-1001188070894")
 	BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
 	FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
-	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
+	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
 	BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "-1001362659779 -1001255795497").split()))
 	OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
 	ABOUT_BOT_TEXT = f"""
@@ -30,14 +30,14 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 
 📡 **Hosted on:** [Heroku](https://heroku.com)
 
-🧑🏻‍💻 **Developer:** @Jasuran123
+🧑🏻‍💻 **Developer:** @Jasuran1234_bot
 
-👥 **Support Group:** [DeepSea](https://t.me/dummypr)
+👥 **Support Group:** [DeepSea](https://t.me/AsuranMoviefinder)
 
-📢 **Updates Channel:** [DeepSea](https://t.me/dummypr)
+📢 **Updates Channel:** [DeepSea](https://t.me/AsuranMoviefinder)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:** @JAsuran123
+🧑🏻‍💻 **Developer:** @JAsuran1234_bot
 
 Developer is Super Noob. Just Learning from Official Docs. Please Donate the developer for Keeping the Service Alive.
 
