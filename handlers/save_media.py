@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @JAsuran
 
 import asyncio
 from configs import Config
@@ -40,7 +40,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             sent_message = await forward_to_channel(bot, message, editable)
             if sent_message is None:
                 continue
-            message_ids_str += f"{str(sent_message.message_id)} "
+            message_ids_str += f"{str(sent_message.id)} "
             await asyncio.sleep(2)
         SaveMessage = await bot.send_message(
             chat_id=Config.DB_CHANNEL,
@@ -50,14 +50,14 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
                 InlineKeyboardButton("Delete Batch", callback_data="closeMessage")
             ]])
         )
-        share_link = f"https://telegran.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(str(SaveMessage.message_id))}"
+        share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=JAsuran_{str_to_b64(str(SaveMessage.id))}"
         await editable.edit(
             f"**Link:** {share_link}",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Open Link", url=share_link)],
-                 [InlineKeyboardButton("Bots Channel", url="https://telegran.me/Asuranmoviefinder"),
-                  InlineKeyboardButton("Support Group", url="https://telegran.me/Asuranmoviefinder")]]
+                 [InlineKeyboardButton("Bots Channel", url="https://telegram.me/Asuranmoviefinder"),
+                  InlineKeyboardButton("Support Group", url="https://telegram.me/Asuranmoviefinder")]]
             ),
             disable_web_page_preview=True
         )
@@ -89,14 +89,14 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
         await forwarded_msg.reply_text(
             f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!",
             parse_mode="Markdown", disable_web_page_preview=True)
-        share_link = f"https://telegran.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(file_er_id)}"
+        share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=JAsuran_{str_to_b64(file_er_id)}"
         await editable.edit(
             f"**Link:** {share_link}",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Open Link", url=share_link)],
-                 [InlineKeyboardButton("Bots Channel", url="https://telegran.me/Asuranmoviefinder"),
-                  InlineKeyboardButton("Support Group", url="https://telegran.me/Asuranmoviefinder")]]
+                 [InlineKeyboardButton("Bots Channel", url="https://telegram.me/Asuranmoviefinder"),
+                  InlineKeyboardButton("Support Group", url="https://telegram.me/Asuranmoviefinder")]]
             ),
             disable_web_page_preview=True
         )
