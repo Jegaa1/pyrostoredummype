@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @JAsuran
 
 import os
 import asyncio
@@ -73,8 +73,8 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/dummypr"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/dummypr")
+                        InlineKeyboardButton("Support Group", url="https://telegram.me/Asuranmoviefinder"),
+                        InlineKeyboardButton("Bots Channel", url="https://telegram.me/Asuranmoviefinder")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -120,7 +120,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/dummypr)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://telegram.me/Asuranmoviefinder)",
                                      disable_web_page_preview=True)
             return
 
@@ -148,17 +148,17 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = str(forwarded_msg.message_id)
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(file_er_id)}"
+            share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=JAsuran_{str_to_b64(file_er_id)}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.message_id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                               "Get Sharable Link", url=share_link)]]))
             if message.chat.username:
                 await forwarded_msg.reply_text(
-                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/{message.chat.username}/{CH_edit.message_id}) Channel's Broadcasted File's Button Added!")
+                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://telegram.me/{message.chat.username}/{CH_editelegram.message_id}) Channel's Broadcasted File's Button Added!")
             else:
                 private_ch = str(message.chat.id)[4:]
                 await forwarded_msg.reply_text(
-                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/c/{private_ch}/{CH_edit.message_id}) Channel's Broadcasted File's Button Added!")
+                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://telegram.me/c/{private_ch}/{CH_editelegram.message_id}) Channel's Broadcasted File's Button Added!")
         except FloodWait as sl:
             await asyncio.sleep(sl.x)
             await bot.send_message(
@@ -319,7 +319,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/dummypr")
+                                             url="https://telegram.me/Asuranmoviefinder")
                     ],
                     [
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
@@ -338,7 +338,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/dummypr")
+                                             url="https://telegram.me/Asuranmoviefinder")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -356,8 +356,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/dummypr"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/dummypr")
+                        InlineKeyboardButton("Support Group", url="https://telegram.me/Asuranmoviefinder"),
+                        InlineKeyboardButton("Bots Channel", url="https://telegram.me/Asuranmoviefinder")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -377,7 +377,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/dummypr).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://telegram.me/Asuranmoviefinder).",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -402,7 +402,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/dummypr).",
+                    text="Something went Wrong. Contact my [Support Group](https://telegram.me/Asuranmoviefinder).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -414,8 +414,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/dummypr"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/dummypr")
+                        InlineKeyboardButton("Support Group", url="https://telegram.me/Asuranmoviefinder"),
+                        InlineKeyboardButton("Bots Channel", url="https://telegram.me/Asuranmoviefinder")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
